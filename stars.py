@@ -15,10 +15,17 @@ S = t.Screen()
 
 
 S.bgcolor('white')
-T.speed(8)
+T.speed(5)
+
+T.hideturtle()      # To hide cursor
+T.penup()           # To avoid printing the movement of the cursor before printing stars
+T.goto(10, 180)     # Putting cursor in the position so that complete fig will be in center
+T.pendown()
 
 n = 20
 h = 10
+
+print("\nPrinting Coloured Stars ...")
 
 T.left(107)
 for i in range(100, 0, -1):
@@ -27,3 +34,5 @@ for i in range(100, 0, -1):
     T.color(c)
     T.left(144)
     T.forward(5 * i)
+
+print("\nColoured Stars Printed\n")
